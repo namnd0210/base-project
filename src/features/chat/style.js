@@ -16,8 +16,7 @@ export const defaultStyle = {
   },
   input: {
     margin: 0,
-    overflow: 'auto',
-    height: 30,
+    overflow: 'hidden',
   },
   '&multiLine': {
     control: {

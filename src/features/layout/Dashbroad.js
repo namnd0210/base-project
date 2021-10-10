@@ -10,7 +10,7 @@ import {
 } from '@ant-design/icons';
 import { Counter } from '../counter/Counter';
 import CustomBreadcrumb from './Breadcrumb';
-import Mentions from '../chat/Mentions';
+import ChatPage from './../chat/index';
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -21,6 +21,7 @@ const Dashbroad = () => {
   return (
     <Router>
       <Layout style={{ minHeight: '100vh' }}>
+        {/* Side bar */}
         <Sider
           collapsible
           collapsed={collapsed}
@@ -53,6 +54,7 @@ const Dashbroad = () => {
           </Menu>
         </Sider>
 
+        {/* Content */}
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }} />
           <Content style={{ margin: '0 16px' }}>
@@ -63,9 +65,7 @@ const Dashbroad = () => {
             </Route>
 
             <Route path="/mention">
-              <div>
-                <Mentions />
-              </div>
+              <ChatPage />
             </Route>
 
             <Route path="/counter">

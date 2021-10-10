@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MentionsInput, Mention } from 'react-mentions';
 import { defaultMentionStyle, defaultStyle } from './style';
 
@@ -33,17 +33,9 @@ const users = [
   },
 ];
 
-const Mentions = () => {
-  const [value, setValue] = useState('');
-
-  const onChange = (event, newValue, newPlainTextValue, mentions) => {
-    console.log({ event, newValue, newPlainTextValue, mentions });
-
-    setValue(newValue);
-  };
-
+const Mentions = ({ message, onChange }) => {
   return (
-    <MentionsInput value={value} onChange={onChange} style={defaultStyle}>
+    <MentionsInput value={message} onChange={onChange} style={defaultStyle}>
       <Mention
         markup="[__display__]{__@id__}"
         trigger="@"
