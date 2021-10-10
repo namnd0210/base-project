@@ -37,7 +37,7 @@ const Mentions = () => {
   const [value, setValue] = useState('');
 
   const onChange = (event, newValue, newPlainTextValue, mentions) => {
-    console.log(event, newValue, newPlainTextValue, mentions);
+    console.log({ event, newValue, newPlainTextValue, mentions });
 
     setValue(newValue);
   };
@@ -49,7 +49,6 @@ const Mentions = () => {
         trigger="@"
         data={users}
         style={defaultMentionStyle}
-        // renderSuggestion={this.renderUserSuggestion}
       />
     </MentionsInput>
   );
