@@ -1,5 +1,7 @@
 export const defaultMentionStyle = {
-  //   color: '#0567A8',
+  backgroundColor: '#c5daf4',
+  opacity: 0.4,
+  padding: '3px 0',
 };
 
 export const defaultStyle = {
@@ -7,15 +9,14 @@ export const defaultStyle = {
     backgroundColor: '#fff',
     fontSize: 14,
     fontWeight: 'normal',
-    color: '#0567A8',
+    color: '#050505',
   },
   highlighter: {
     overflow: 'hidden',
   },
   input: {
     margin: 0,
-    overflow: 'auto',
-    height: 30,
+    overflow: 'hidden',
   },
   '&multiLine': {
     control: {
@@ -33,8 +34,7 @@ export const defaultStyle = {
     },
   },
   suggestions: {
-    bottom: '0',
-    top: 'unset',
+    top: '0',
     list: {
       backgroundColor: 'white',
       border: '1px solid rgba(0,0,0,0.15)',
@@ -44,7 +44,7 @@ export const defaultStyle = {
       padding: '5px 15px',
       borderBottom: '1px solid rgba(0,0,0,0.15)',
       '&focused': {
-        backgroundColor: '#cee4e5',
+        backgroundColor: '#c5daf4',
       },
     },
   },
